@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css">
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
+
+</head>
+
+<body>
+    <div class="sidebar">
+        <button class="sidebar-btn active" onclick="changePage('home')" data-page="home">Home</button>
+        <button class="sidebar-btn" onclick="changePage('accounts')"data-page="accounts" >Accounts</button>
+        <button class="sidebar-btn" onclick="changePage('settings')" data-page="settings">Settings</button>
+        <button class="sidebar-btn" onclick="changePage('profile')" data-page="profile">Profile</button>
+        <button class="sidebar-btn logout" onclick="changePage('logout')">Logout</button>
+    </div>
+
+    <div class="content">
+        <div id="home" class="page active">
+            <span class="salute">Welcome to the Dashboard, <%= user.firstname %>!</span>
+            <div class="main-container">
+                <div class="chart-container">
+                    <h1>charts</h1>
+                    <canvas id="transactionChart"></canvas>
+                </div>
+                <div class="calender-container">
+                    <h1>calender<h1>
+                    <div id="calendar"></div>
+                </div>
+                <div class="calender-number-card">
+                    <h1>$$$--$$</h1>
+                </div>
+                <div class="upcomming-notifications">
+                    <h1>upcommin notification</h1>
+                </div>
+                <div class="transactions-bed">
+                    <h1>transactions</h1>
+                </div>
+            </div>
+        </div>
+
+        <div id="accounts" class="page">
+            <div class="main-container">
+                <div class="Accounts">
+                    <div class="mpesa-card">
+                        <h1>mpesa</h1>
+                        <button id="initiatePromptBtn">Initiate Prompt</button>
+                    </div>
+        
+                    <div class="lipalater-card">
+                        lipalater
+                    </div>
+                    <div class="kopokopo-card">
+                        kopokopo
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Popup -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <h2>Initiate Prompt</h2>
+                <input type="text" id="phoneNumber" placeholder="Phone Number" required>
+                <input type="number" id="amount" placeholder="Amount" required>
+                <button id="payBtn">Pay</button>
+                <button id="closeBtn">Close</button>
+            </div>
+        </div>
+
+
+        <div id="settings" class="page">
+            <div class="main-container">
+                <h1>Account Settings</h1>
+            </div>
+        </div>
+
+        <div id="profile" class="page">
+            <div class="main-container">
+                <h1>Profile</h1>
+                <p>Email: <%= user.email %>
+                </p>
+                <p>Phone: <%= user.phone %>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

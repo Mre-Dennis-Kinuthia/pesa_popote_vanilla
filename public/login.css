@@ -1,0 +1,80 @@
+body{
+    background-color: smokey whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0;
+}
+nav{
+    height: 75px;
+    width: 100%;
+    background-color: #FAFAF2;
+    position: absolute;
+    top: 0;
+    left 0;
+
+}
+.container{
+    width: 35%;
+    height: 350px;
+    position: absolute;
+    top: 15%;
+    left:32.5%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container h2 {
+    font-size: 25px;
+    font-weight: bold;
+
+}
+input[type="text"], input[type="password"], select {
+    width: 80%;
+    height: 30px;
+    border: none;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+}
+input[type="submit"]{
+    width: 50%;
+    height: 30px;
+    background-color: #1771F1;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-left: 65px; 
+}
+input[type="submit"]:hover{
+    background-color: white;
+    color: #1771F1;
+    transition: all 0.5s ease;
+    border: 1px solid #1771F1;
+    
+}
+form{
+    width: 100%;
+    position: absolute;
+    left: 10%;
+}
+form h1{
+    font-size: 11px;
+    color:#3e3e40;
+    font-weight: bold;
+    margin-left: 88px;
+    margin-top: 5px;
+}
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    margin-right: 10px;
+    cursor: pointer;
+}
+nav a {
+    color: blue;
+    text-decoration: none;
+}
